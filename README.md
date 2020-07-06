@@ -4,7 +4,8 @@ Scrape images from the internet.
 
 ## Getting Started
 
-Initialize the project with the command: `npm install`.
+- Make sure you have the latest LTS version of NodeJS installed.
+- Initialize the project with the command: `npm install`.
 
 ## Example Uses
 
