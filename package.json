@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/DavidB117/ImageDownloader.git"
   },
   "dependencies": {
     "axios": "^0.19.2",
