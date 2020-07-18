@@ -4,7 +4,9 @@
   "description": "Scrape images from the internet.",
   "main": "index.js",
   "scripts": {
-    "pokedex": "node index.js -b https://pokeres.bastionbot.org/images/pokemon/ -i .png -c 151 -f ./pokedex/"
+    "pokedex": "node index.js -b https://pokeres.bastionbot.org/images/pokemon/ -i .png -c 151 -f C:/Users/David/Pictures/MyPictures/pokedex",
+    "pokedex-debug": "node --inspect-brk index.js -b https://pokeres.bastionbot.org/images/pokemon/ -i .png -c 151 -f C:/Users/David/Pictures/MyPictures/pokedex",
+    "sprites": "node index.js -b https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/ -i .png -c 151 -f C:/Users/David/Pictures/MyPictures/sprites"
   },
   "author": "David Robert Ball",
   "license": "MIT",

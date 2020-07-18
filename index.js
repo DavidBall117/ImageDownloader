@@ -1,8 +1,8 @@
 const fs = require(`fs`);
 const axios = require(`axios`);
 const yargs = require(`yargs`);
+const path = require(`path`);
 
-// Settings
 const options = yargs
   .usage(
     `Usage: -b <baseUrl> -i <imageType> -c <count> -f <folder> -si <startIndex>`
@@ -54,7 +54,8 @@ const downloadImage = async (counter) => {
   try {
     const res = await axios({ url, method: `GET`, responseType: `stream` });
     if (res.status >= 200 && res.status < 300) {
-      const ws = fs.createWriteStream(`${FOLDER}${counter}${IMAGE_TYPE}`, {
+      const directory = path.join(FOLDER, `${counter}${IMAGE_TYPE}`);
+      const ws = fs.createWriteStream(directory, {
         flags: `w`,
       });
       ws.on(`error`, writeStreamErrorHandler);
@@ -67,7 +68,6 @@ const downloadImage = async (counter) => {
   }
 };
 
-// Main
 (async () => {
   if (!fs.existsSync(FOLDER)) {
     fs.mkdirSync(FOLDER);
