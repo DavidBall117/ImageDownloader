@@ -4,7 +4,6 @@
   "description": "Scrape images from the internet.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
     "pokedex": "node index.js -b https://pokeres.bastionbot.org/images/pokemon/ -i .png -c 151 -f ./pokedex/"
   },
   "author": "David Robert Ball",
